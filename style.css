@@ -1,0 +1,325 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #080808;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.logo {
+    color: #e50914;
+    font-size: 32px;
+    font-weight: 900;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 22px;
+    font-weight: bold;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* LOGIN AND SIGNUP */
+
+#authScreen {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:
+    linear-gradient(#000a,#000d),
+    url("https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=1200")
+    center/cover;
+}
+
+.auth-box {
+    width: 90%;
+    max-width: 400px;
+    background: #151515;
+    padding: 35px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.auth-box h2 {
+    margin: 25px 0 10px;
+}
+
+.auth-box p {
+    color: #aaa;
+    margin-bottom: 20px;
+}
+
+.auth-box input {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin: 15px 0;
+    background: #292929;
+    border: 1px solid #444;
+    border-radius: 5px;
+    color: white;
+}
+
+#authButton {
+    width: 100%;
+    background: #e50914;
+    color: white;
+    margin: 15px 0;
+}
+
+.switch a {
+    color: #e50914;
+    text-decoration: none;
+}
+
+#authMessage {
+    color: #ff5555;
+}
+
+/* HEADER */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 4%;
+    background: #090909;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    gap: 15px;
+}
+
+nav {
+    display: flex;
+    gap: 22px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #e50914;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.header-right input {
+    width: 160px;
+    padding: 10px;
+    background: #222;
+    border: 1px solid #444;
+    color: white;
+    border-radius: 5px;
+}
+
+.header-right button {
+    background: #e50914;
+    color: white;
+}
+
+/* HERO SECTION */
+
+.hero {
+    height: 470px;
+    background:
+    linear-gradient(to right,#000 5%,transparent),
+    linear-gradient(to top,#080808,transparent),
+    url("https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=1600")
+    center/cover;
+    display: flex;
+    align-items: center;
+    padding: 5%;
+}
+
+.hero-content {
+    max-width: 500px;
+}
+
+.badge {
+    color: #e50914;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+.hero h2 {
+    font-size: 43px;
+    margin: 20px 0;
+}
+
+.hero p {
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.hero button {
+    background: #e50914;
+    color: white;
+}
+
+/* MOVIE SECTIONS */
+
+main {
+    padding: 20px 3%;
+}
+
+main section {
+    margin: 35px 0;
+}
+
+main h2 {
+    margin-bottom: 18px;
+}
+
+.movie-row {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    padding: 10px 5px 20px;
+}
+
+.movie-card {
+    min-width: 210px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.movie-card:hover {
+    transform: scale(1.06);
+}
+
+.movie-card img {
+    width: 210px;
+    height: 125px;
+    object-fit: cover;
+    border-radius: 7px;
+}
+
+.movie-card h3 {
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+.movie-card p {
+    color: #aaa;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/* VIDEO PLAYER */
+
+#playerModal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: #000e;
+    z-index: 100;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.player-box {
+    width: 95%;
+    max-width: 850px;
+    background: #151515;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.player-box h2 {
+    margin: 15px 0;
+}
+
+.player-box video {
+    width: 100%;
+    max-height: 65vh;
+    background: black;
+}
+
+.player-box p {
+    margin-top: 15px;
+    color: #bbb;
+}
+
+.close {
+    float: right;
+    background: #e50914;
+    color: white;
+}
+
+/* FOOTER */
+
+footer {
+    padding: 40px;
+    text-align: center;
+    background: #111;
+    color: #aaa;
+}
+
+footer p {
+    margin-top: 12px;
+}
+
+/* MOBILE RESPONSIVENESS */
+
+@media(max-width:750px) {
+
+    header {
+        flex-wrap: wrap;
+    }
+
+    nav {
+        width: 100%;
+        justify-content: space-between;
+        gap: 8px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .header-right {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .header-right input {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .hero {
+        height: 380px;
+    }
+
+    .hero h2 {
+        font-size: 30px;
+    }
+
+    .movie-card {
+        min-width: 170px;
+    }
+
+    .movie-card img {
+        width: 170px;
+        height: 110px;
+    }
+}
